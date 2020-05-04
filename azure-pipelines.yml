@@ -15,8 +15,3 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
-- task: AzureWebApp@1
-  inputs:
-    azureSubscription: 'Pay-As-You-Go(ee70b804-5df7-4eca-b9de-8c253806cbdb)'
-    appName: 'quanpipelinetest'
-    package: $(System.DefaultWorkingDirectory)/**/*.zip    
